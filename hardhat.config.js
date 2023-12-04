@@ -14,17 +14,17 @@ require('mocha')
 module.exports = {
   networks: {
     sepolia: {
-      url: 'https://sepolia.infura.io/v3/200c1554096d4b7aa08be1cba45e9e19',
-      accounts: ['6eb736ab4da6fc7139a88d710eb8c0db47d4f94c2e6e4311ea2ef17c8743d325'],
+      url: process.env.SEPOLIA_RPC_URL,
+      accounts: [process.env.PRIVATE_KEY],
       live: true,
       saveDeployments: true,
       tags: ['staging'],
       gas: 5000000,
       timeout: 10000000,
     },
-    mubai: {
-      url: process.env.Polygon_Mumbai,
-      accounts: ['6eb736ab4da6fc7139a88d710eb8c0db47d4f94c2e6e4311ea2ef17c8743d325'],
+    mumbai: {
+      url: process.env.MUMBAI_RPC_URL,
+      accounts: [process.env.PRIVATE_KEY],
       live: true,
       saveDeployments: true,
       tags: ['staging'],
